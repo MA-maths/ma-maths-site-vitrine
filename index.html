@@ -306,6 +306,31 @@
         .form-success i { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
         .form-success p { font-size: 1.15rem; color: var(--dark); font-weight: 500; }
 
+        /* BANNIERE PLATEFORME */
+        .promo-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 18px 60px 18px 25px;
+            z-index: 1500;
+            transform: translateY(110%);
+            transition: transform 0.5s ease;
+            box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.25);
+        }
+        .promo-banner.visible { transform: translateY(0); }
+        .promo-banner-inner { display: flex; align-items: center; justify-content: center; gap: 25px; flex-wrap: wrap; max-width: var(--container-width); margin: 0 auto; }
+        .promo-banner p { color: var(--white); margin-bottom: 0; font-size: 1rem; font-weight: 500; }
+        .promo-close { position: absolute; top: 8px; right: 12px; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; line-height: 1; padding: 5px; }
+        .promo-close:hover { color: #c7d2fe; }
+        .btn-promo { background: var(--white); color: var(--primary); font-weight: 600; padding: 10px 24px; border-radius: 50px; }
+        .btn-promo:hover { background: #e8eaf6; color: var(--primary-dark); transform: translateY(-2px); }
+        @media (max-width: 768px) {
+            .promo-banner { padding: 15px 50px 15px 20px; }
+            .promo-banner-inner { flex-direction: column; gap: 12px; text-align: center; }
+            .promo-banner p { font-size: 0.92rem; }
+            .btn-promo { padding: 9px 20px; font-size: 0.9rem; }
+        }
+
         /* FOOTER */
         .footer { background: var(--dark); color: rgba(255, 255, 255, 0.8); padding: 60px 0 30px; }
         .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 40px; }
@@ -816,6 +841,15 @@
         </div>
     </footer>
 
+    <!-- Bannière plateforme -->
+    <div class="promo-banner" id="promoBanner" role="dialog" aria-label="Accès à la plateforme de formation">
+        <button class="promo-close" id="promoClose" aria-label="Fermer la bannière">&times;</button>
+        <div class="promo-banner-inner">
+            <p>Nos services vous intéressent ? Rendez-vous sur la plateforme pour accéder à nos formations.</p>
+            <a href="https://academie.ma-maths.com" class="btn btn-promo" target="_blank" rel="noopener">Accéder à la plateforme</a>
+        </div>
+    </div>
+
     <script>
         // Header scroll effect
         const header = document.getElementById('header');
@@ -913,6 +947,39 @@
             e.preventDefault();
             contactForm.style.display = 'none';
             formSuccess.classList.add('show');
+        });
+
+        // Bannière plateforme : apparait une seule fois par visite,
+        // après 20 secondes sur la page et un défilement d'au moins 300 pixels.
+        const promoBanner = document.getElementById('promoBanner');
+        const promoClose = document.getElementById('promoClose');
+        const PROMO_DELAY_MS = 20000;
+        const PROMO_SCROLL_PX = 300;
+        let promoTimeReached = false;
+        let promoScrolled = false;
+
+        function tryShowPromoBanner() {
+            if (promoTimeReached && promoScrolled && !sessionStorage.getItem('maMathsPromoShown')) {
+                sessionStorage.setItem('maMathsPromoShown', '1');
+                promoBanner.classList.add('visible');
+            }
+        }
+
+        setTimeout(() => {
+            promoTimeReached = true;
+            tryShowPromoBanner();
+        }, PROMO_DELAY_MS);
+
+        window.addEventListener('scroll', () => {
+            if (!promoScrolled && window.scrollY >= PROMO_SCROLL_PX) {
+                promoScrolled = true;
+                tryShowPromoBanner();
+            }
+        }, { passive: true });
+
+        promoClose.addEventListener('click', () => {
+            promoBanner.classList.remove('visible');
+            sessionStorage.setItem('maMathsPromoShown', '1');
         });
     </script>
 </body>
