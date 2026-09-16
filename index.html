@@ -307,28 +307,42 @@
         .form-success p { font-size: 1.15rem; color: var(--dark); font-weight: 500; }
 
         /* BANNIERE PLATEFORME */
-        .promo-banner {
+        .promo-overlay {
             position: fixed;
-            bottom: 0; left: 0; right: 0;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 18px 60px 18px 25px;
-            z-index: 1500;
-            transform: translateY(110%);
-            transition: transform 0.5s ease;
-            box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.25);
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(13, 27, 96, 0.55);
+            z-index: 1490;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
         }
-        .promo-banner.visible { transform: translateY(0); }
-        .promo-banner-inner { display: flex; align-items: center; justify-content: center; gap: 25px; flex-wrap: wrap; max-width: var(--container-width); margin: 0 auto; }
-        .promo-banner p { color: var(--white); margin-bottom: 0; font-size: 1rem; font-weight: 500; }
-        .promo-close { position: absolute; top: 8px; right: 12px; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; line-height: 1; padding: 5px; }
+        .promo-overlay.visible { opacity: 1; visibility: visible; }
+        .promo-banner {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 20px;
+            padding: 50px 40px 45px;
+            max-width: 640px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+            transform: scale(0.92) translateY(20px);
+            opacity: 0;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+        .promo-overlay.visible .promo-banner { transform: scale(1) translateY(0); opacity: 1; }
+        .promo-banner-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 25px; }
+        .promo-banner p { color: var(--white); margin-bottom: 0; font-size: 1.2rem; font-weight: 500; line-height: 1.6; }
+        .promo-close { position: absolute; top: 12px; right: 15px; background: none; border: none; color: var(--white); font-size: 1.6rem; cursor: pointer; line-height: 1; padding: 5px; }
         .promo-close:hover { color: #c7d2fe; }
-        .btn-promo { background: var(--white); color: var(--primary); font-weight: 600; padding: 10px 24px; border-radius: 50px; }
+        .btn-promo { background: var(--white); color: var(--primary); font-weight: 600; padding: 14px 32px; border-radius: 50px; font-size: 1.05rem; }
         .btn-promo:hover { background: #e8eaf6; color: var(--primary-dark); transform: translateY(-2px); }
         @media (max-width: 768px) {
-            .promo-banner { padding: 15px 50px 15px 20px; }
-            .promo-banner-inner { flex-direction: column; gap: 12px; text-align: center; }
-            .promo-banner p { font-size: 0.92rem; }
-            .btn-promo { padding: 9px 20px; font-size: 0.9rem; }
+            .promo-banner { padding: 40px 25px 35px; }
+            .promo-banner p { font-size: 1.05rem; }
         }
 
         /* FOOTER */
@@ -812,7 +826,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo">
-                        <img src="logo-ma-maths.jpg" alt="MA-Maths" class="logo-img" style="filter: brightness(0) invert(1);">
+                        <img src="logo-ma-maths.jpg" alt="MA-Maths, cours de mathématiques à Angers" class="logo-img" style="border-radius: 10px;">
                     </div>
                     <p>Cours et stages de mathématiques à Angers et en ligne, du collège au lycée, avec professeure certifiée.</p>
                 </div>
@@ -842,11 +856,13 @@
     </footer>
 
     <!-- Bannière plateforme -->
-    <div class="promo-banner" id="promoBanner" role="dialog" aria-label="Accès à la plateforme de formation">
-        <button class="promo-close" id="promoClose" aria-label="Fermer la bannière">&times;</button>
-        <div class="promo-banner-inner">
-            <p>Nos services vous intéressent ? Rendez-vous sur la plateforme pour accéder à nos formations.</p>
-            <a href="https://academie.ma-maths.com" class="btn btn-promo" target="_blank" rel="noopener">Accéder à la plateforme</a>
+    <div class="promo-overlay" id="promoOverlay">
+        <div class="promo-banner" id="promoBanner" role="dialog" aria-modal="true" aria-label="Accès à la plateforme de formation">
+            <button class="promo-close" id="promoClose" aria-label="Fermer la bannière">&times;</button>
+            <div class="promo-banner-inner">
+                <p>Nos services vous intéressent ? Rendez-vous sur la plateforme pour accéder à nos formations.</p>
+                <a href="https://academie.ma-maths.com" class="btn btn-promo" target="_blank" rel="noopener">Accéder à la plateforme</a>
+            </div>
         </div>
     </div>
 
@@ -952,6 +968,7 @@
         // Bannière plateforme : apparait une seule fois par visite,
         // après 20 secondes sur la page et un défilement d'au moins 300 pixels.
         const promoBanner = document.getElementById('promoBanner');
+        const promoOverlay = document.getElementById('promoOverlay');
         const promoClose = document.getElementById('promoClose');
         const PROMO_DELAY_MS = 20000;
         const PROMO_SCROLL_PX = 300;
@@ -961,7 +978,7 @@
         function tryShowPromoBanner() {
             if (promoTimeReached && promoScrolled && !sessionStorage.getItem('maMathsPromoShown')) {
                 sessionStorage.setItem('maMathsPromoShown', '1');
-                promoBanner.classList.add('visible');
+                promoOverlay.classList.add('visible');
             }
         }
 
@@ -977,9 +994,14 @@
             }
         }, { passive: true });
 
-        promoClose.addEventListener('click', () => {
-            promoBanner.classList.remove('visible');
+        function hidePromoBanner() {
+            promoOverlay.classList.remove('visible');
             sessionStorage.setItem('maMathsPromoShown', '1');
+        }
+
+        promoClose.addEventListener('click', hidePromoBanner);
+        promoOverlay.addEventListener('click', (e) => {
+            if (e.target === promoOverlay) hidePromoBanner();
         });
     </script>
 </body>
