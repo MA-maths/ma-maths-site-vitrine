@@ -3,34 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MA-Maths - Cours et stages de mathématiques à Angers, en ligne et en distanciel avec professeur certifié">
+    <meta name="description" content="Cours et stages de mathématiques à Angers et en ligne, du collège au lycée, avec professeure certifiée (10 ans d'expérience).">
     <meta property="og:type" content="website">
     <meta property="og:title" content="MA-Maths | L'excellence en mathématiques, accessible à tous">
-    <meta property="og:description" content="Cours et stages de mathématiques à Angers et en ligne, du collège au lycée, avec professeur certifié (10 ans d'expérience).">
+    <meta property="og:description" content="Cours et stages de mathématiques à Angers et en ligne, du collège au lycée, avec professeure certifiée (10 ans d'expérience).">
     <meta property="og:image" content="logo-ma-maths.jpg">
     <meta property="og:url" content="https://www.ma-maths.com">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MA-Maths | L'excellence en mathématiques">
-    <meta name="twitter:description" content="Cours et stages de mathématiques à Angers et en ligne, avec professeur certifié.">
+    <meta name="twitter:description" content="Cours et stages de mathématiques à Angers et en ligne, avec professeure certifiée.">
+
+    <!-- Schema EducationalOrganization + LocalBusiness -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
         "name": "MA-Maths",
-        "description": "Cours et stages de mathématiques à Angers et en ligne, du collège au lycée, avec professeur certifié.",
+        "description": "Cours et stages de mathématiques à Angers et en ligne, du collège au lycée, avec professeure certifiée.",
         "url": "https://www.ma-maths.com",
         "email": "contact@ma-maths.com",
         "telephone": "+33749123599",
-        "image": "logo-ma-maths.jpg",
+        "image": "https://www.ma-maths.com/logo-ma-maths.jpg",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Angers",
+            "addressRegion": "Pays de la Loire",
+            "postalCode": "49000",
             "addressCountry": "FR"
         },
-        "areaServed": "France (en ligne) et Angers (présentiel pour stages)",
-        "sameAs": ["https://academie.ma-maths.com"]
+        "areaServed": ["Angers", "Maine-et-Loire", "France (en ligne)"],
+        "founder": {
+            "@type": "Person",
+            "name": "Marie-Albane Dupuy",
+            "jobTitle": "Professeure certifiée de mathématiques"
+        },
+        "sameAs": [
+            "https://academie.ma-maths.com",
+            "https://maps.google.com/maps?cid=4095178417133372705"
+        ]
     }
     </script>
+
+    <!-- Schema FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quels niveaux sont concernés ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tous les élèves sont accueillis, de la cinquième à la première. Les formations s'adressent également aux professionnels désirant se remettre à niveau sur certaines notions, ainsi qu'aux élèves désireux d'approfondir leurs apprentissages et se destinant à des carrières scientifiques."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Les cours se déroulent-ils en présentiel ou à distance ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La plateforme privilégie les formations à distance, afin de rester accessible partout en France. Exceptionnellement, des stages de remise à niveau ou de pré-rentrée sont proposés en présentiel, dans des salles dédiées à Angers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment sont élaborés les cours et quelles sont vos méthodes ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Les cours sont élaborés à partir de ressources et supports pédagogiques uniques, personnels et utilisés dans les meilleurs établissements de France (Stanislas Paris, Henri IV, Janson de Sailly, Saint-Louis de Gonzague). MA s'inspire des méthodes de ces établissements, en y apportant son expérience, sa pédagogie, ses valeurs et son vécu."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment se déroulent les apprentissages ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Les formations sont asynchrones : les élèves progressent à leur rythme, selon leur emploi du temps, en utilisant les outils en ligne mis à disposition sur la plateforme. Il est toujours possible de contacter MA pendant la formation. Les sessions de correction des exercices et des contrôles durent entre une heure et une heure trente."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quels sont les tarifs ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Les tarifs varient en fonction des formations, de leur durée et de leur complexité. L'ensemble des grilles tarifaires est consultable directement sur la plateforme, à l'adresse academie.ma-maths.com."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment prendre rendez-vous ou poser une question ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Vous pouvez réserver un créneau de 15 minutes via le lien de prise de rendez-vous, ou nous écrire directement via le formulaire de contact en bas de la page d'accueil. Nous vous répondrons dans les meilleurs délais."
+                }
+            }
+        ]
+    }
+    </script>
+
     <title>MA-Maths | L'excellence en mathématiques</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -318,7 +389,7 @@
     <header class="header" id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="logo-ma-maths.jpg" alt="MA-Maths" class="logo-img">
+                <img src="logo-ma-maths.jpg" alt="MA-Maths, cours de mathématiques à Angers" class="logo-img">
             </a>
             <nav class="navbar">
                 <ul class="nav-links">
@@ -353,7 +424,7 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">L'excellence en mathématiques, <span class="highlight">accessible à tous</span></h1>
-                <p class="hero-subtitle">Cours et stages de mathématiques à Angers, en ligne et en distanciel avec professeur certifié</p>
+                <p class="hero-subtitle">Cours et stages de mathématiques à Angers, en ligne et en distanciel avec professeure certifiée</p>
                 <a href="https://academie.ma-maths.com" class="btn btn-primary btn-large">Découvrir nos formations</a>
                 <div class="hero-trust">
                     <span class="trust-badge">Professeur certifié en maths</span>
@@ -364,7 +435,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="photo.jpg" alt="Marie-Albane Dupuy" class="hero-photo">
+                <img src="photo.jpg" alt="Marie-Albane Dupuy, professeure certifiée de mathématiques à Angers" class="hero-photo">
             </div>
         </div>
         <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
@@ -390,7 +461,7 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <p class="lead">Bonjour, je m'appelle Marie-Albane. Je suis mère de 2 enfants et professeur certifié de mathématiques.</p>
+                    <p class="lead">Bonjour, je m'appelle Marie-Albane. Je suis mère de 2 enfants et professeure certifiée de mathématiques.</p>
                     <p>J'ai enseigné pendant plus de 10 ans au sein de grands établissements privés parisiens avant de rejoindre l'Anjou, où j'ai eu des classes diverses et variées, au collège et au lycée.</p>
                     <p>J'ai accompagné des dizaines d'élèves en cours privé, en soutien ou approfondissement des mathématiques, à Paris et en province. J'ai également animé des stages de remise à niveau et de pré-rentrée.</p>
                     <p class="mission">Bien accompagné, je suis convaincue que chacun peut libérer tout son potentiel en mathématiques. Avec écoute, bienveillance, et passion, j'offre le meilleur de mon expérience et de mes méthodes aux élèves désireux de comprendre, d'apprendre et d'approfondir leurs connaissances et méthodes de travail en mathématiques.</p>
@@ -462,6 +533,49 @@
         </div>
     </section>
 
+    <!-- Stages Section -->
+    <section id="stages" class="section bg-light" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Stages de pré-rentrée à <span class="logo-accent">Angers</span></h2>
+            </div>
+            <div class="formations-grid">
+                <div class="formation-card" style="border: 2px solid var(--primary);">
+                    <div class="formation-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Stage de maths - Entrée en Première</h3>
+                    <p>Spécialiste du passage Seconde vers Première, j'accompagne les élèves vers une transition réussie : révision des notions clés de Seconde, méthodologie lycée et préparation aux spécialités scientifiques.</p>
+                    <ul style="text-align: left; color: var(--text); margin-bottom: 20px; padding-left: 20px; line-height: 1.8;">
+                        <li>Du 24 au 28 août 2026</li>
+                        <li>15 heures intensives en présentiel à Angers</li>
+                        <li>10 élèves maximum</li>
+                        <li>Révision des notions essentielles de Seconde</li>
+                        <li>Méthodologie adaptée aux exigences du lycée</li>
+                    </ul>
+                    <a href="https://academie.ma-maths.com" class="btn btn-primary" target="_blank" rel="noopener">S'inscrire</a>
+                </div>
+                <div class="formation-card" style="border: 2px solid var(--primary);">
+                    <div class="formation-icon"><i class="fas fa-school"></i></div>
+                    <h3>Stage de maths - Entrée en Seconde</h3>
+                    <p>Réussir l'entrée au lycée commence par des bases solides. Ce stage permet de consolider les acquis du collège et d'acquérir les méthodes de travail indispensables au lycée.</p>
+                    <ul style="text-align: left; color: var(--text); margin-bottom: 20px; padding-left: 20px; line-height: 1.8;">
+                        <li>Révision des fondamentaux du collège</li>
+                        <li>Méthodologie pour le lycée</li>
+                        <li>Présentiel à Angers</li>
+                        <li>10 élèves maximum</li>
+                        <li>Reprise de confiance en mathématiques</li>
+                    </ul>
+                    <a href="https://academie.ma-maths.com" class="btn btn-primary" target="_blank" rel="noopener">S'inscrire</a>
+                </div>
+                <div class="formation-card" style="background: var(--primary); color: var(--white);">
+                    <div class="formation-icon" style="background: rgba(255,255,255,0.2); color: var(--white);"><i class="fas fa-laptop-house"></i></div>
+                    <h3 style="color: var(--white);">Cours de maths en ligne</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Pour les élèves qui ne peuvent pas se déplacer à Angers, retrouvez toutes nos formations à distance sur la plateforme académique. Accessible partout en France.</p>
+                    <a href="https://academie.ma-maths.com" class="btn btn-secondary" style="color: var(--white); border-color: var(--white);" target="_blank" rel="noopener">Découvrir les cours en ligne</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Counters Section -->
     <section id="chiffres" class="section counters bg-primary">
         <div class="container">
@@ -500,93 +614,100 @@
                         <i class="fas fa-quote-left quote-icon"></i>
                         <div class="testimonial-content">
                             <p>Je recommande vivement Marie-Albane ! Très pédagogue, patiente et à l'écoute, elle sait expliquer les choses simplement et s'adapter au niveau de chacun. Sérieuse, bienveillante et toujours impliquée, vous pouvez lui faire confiance les yeux fermés.</p>
+                            <p class="testimonial-author">Rémi C.</p>
                         </div>
-                        <div class="testimonial-author"><strong>Rémi C.</strong></div>
                     </div>
                     <div class="testimonial-card carousel-slide">
                         <i class="fas fa-quote-left quote-icon"></i>
                         <div class="testimonial-content">
                             <p>Passionnée, compétente, appréciée par notre fils, nous vous recommandons chaleureusement Marie Albane. Elle a su combler les lacunes de son professeur actuel et faire rattraper le retard dont souffrait notre enfant pour lui permettre de rattraper les wagons.</p>
+                            <p class="testimonial-author">Roxane B.</p>
                         </div>
-                        <div class="testimonial-author"><strong>Roxane B.</strong></div>
                     </div>
                     <div class="testimonial-card carousel-slide">
                         <i class="fas fa-quote-left quote-icon"></i>
                         <div class="testimonial-content">
                             <p>Mon niveau de maths présentait beaucoup de lacunes car j'avais commencé à décrocher dès la classe de 5e jusqu'au Bac, il y avait donc du boulot. MA est très claire et dynamique dans ses explications, et prend le temps d'expliquer chaque concept un par un. Tout ce qu'il faut pour maîtriser les maths. Merci encore !</p>
+                            <p class="testimonial-author">Augustin F.</p>
                         </div>
-                        <div class="testimonial-author"><strong>Augustin F.</strong></div>
                     </div>
                     <div class="testimonial-card carousel-slide">
                         <i class="fas fa-quote-left quote-icon"></i>
                         <div class="testimonial-content">
                             <p>MA a accompagné depuis la 5ème notre fils, de la compréhension des cours, entraînements, préparation des DST, révisions des chapitres. Excellente approche, technique et pédagogique qui a permis à notre fils de réussir dans un cadre scolaire exigeant. Nous recommandons sans hésiter.</p>
+                            <p class="testimonial-author">Camilla L.</p>
                         </div>
-                        <div class="testimonial-author"><strong>Camilla L.</strong></div>
                     </div>
                     <div class="testimonial-card carousel-slide">
                         <i class="fas fa-quote-left quote-icon"></i>
                         <div class="testimonial-content">
-                            <p>Pure littéraire, MA m'a réconcilié avec les mathématiques, en me donnant confiance en moi. Elle a su lever mes blocages, m'encourager et me donner des méthodes qui aujourd'hui encore me servent.</p>
-                            <p class="mt-2">La prof que tout le monde rêve d'avoir.</p>
+                            <p>Pure littéraire, MA m'a réconcilié avec les mathématiques, en me donnant confiance en moi. Elle a su lever mes blocages, m'encourager et me donner des méthodes qui aujourd'hui encore me servent. La prof que tout le monde rêve d'avoir.</p>
+                            <p class="testimonial-author">Henry B.</p>
                         </div>
-                        <div class="testimonial-author"><strong>Henry B.</strong></div>
                     </div>
                     <div class="testimonial-card carousel-slide">
                         <i class="fas fa-quote-left quote-icon"></i>
                         <div class="testimonial-content">
-                            <p>MA a soutenu nos enfants en maths pour les former aux grandes écoles, avec des prépas scientifiques. Ses méthodes, ses supports et ses enseignements ont été déterminants pour notre aîné qui a intégré l'ESCP.</p>
-                            <p class="mt-2">On peut lui faire entièrement confiance pour nourrir des enfants et les préparer à un cadre exigeant.</p>
+                            <p>MA a soutenu nos enfants en maths pour les former aux grandes écoles, avec des prépas scientifiques. Ses méthodes, ses supports et ses enseignements ont été déterminants pour notre aîné qui a intégré l'ESCP. On peut lui faire entièrement confiance pour nourrir des enfants et les préparer à un cadre exigeant.</p>
+                            <p class="testimonial-author">Marie-B P.</p>
                         </div>
-                        <div class="testimonial-author"><strong>Marie-B P.</strong></div>
                     </div>
                 </div>
                 <div class="carousel-controls">
-                    <button class="carousel-btn prev" id="carouselPrev" aria-label="Témoignage précédent"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
                     <div class="carousel-dots" id="carouselDots"></div>
-                    <button class="carousel-btn next" id="carouselNext" aria-label="Témoignage suivant"><i class="fas fa-chevron-right"></i></button>
+                    <button class="carousel-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="section faq">
+    <section id="faq" class="section bg-light">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Questions fréquentes</h2>
             </div>
             <div class="faq-container">
                 <details class="faq-item">
-                    <summary class="faq-question">Quels niveaux sont concernés ? <i class="fas fa-chevron-down"></i></summary>
+                    <summary class="faq-question">Quels niveaux sont concernés ?<i class="fas fa-chevron-down"></i></summary>
                     <div class="faq-answer">Tous les élèves sont accueillis, de la cinquième à la première. Les formations s'adressent également aux professionnels désirant se remettre à niveau sur certaines notions, ainsi qu'aux élèves désireux d'approfondir leurs apprentissages et se destinant à des carrières scientifiques.</div>
                 </details>
                 <details class="faq-item">
-                    <summary class="faq-question">Les cours se déroulent-ils en présentiel ou à distance ? <i class="fas fa-chevron-down"></i></summary>
+                    <summary class="faq-question">Les cours se déroulent-ils en présentiel ou à distance ?<i class="fas fa-chevron-down"></i></summary>
                     <div class="faq-answer">La plateforme privilégie les formations à distance, afin de rester accessible partout en France. Exceptionnellement, des stages de remise à niveau ou de pré-rentrée sont proposés en présentiel, dans des salles dédiées à Angers.</div>
                 </details>
                 <details class="faq-item">
-                    <summary class="faq-question">Comment sont élaborés les cours et quelles sont vos méthodes ? <i class="fas fa-chevron-down"></i></summary>
+                    <summary class="faq-question">Comment sont élaborés les cours et quelles sont vos méthodes ?<i class="fas fa-chevron-down"></i></summary>
                     <div class="faq-answer">Les cours sont élaborés à partir de ressources et supports pédagogiques uniques, personnels et utilisés dans les meilleurs établissements de France (Stanislas Paris, Henri IV, Janson de Sailly, Saint-Louis de Gonzague). MA s'inspire des méthodes de ces établissements, en y apportant son expérience, sa pédagogie, ses valeurs et son vécu. Elle les adapte à chaque élève accompagné selon sa personnalité et ses besoins.</div>
                 </details>
                 <details class="faq-item">
-                    <summary class="faq-question">Comment se déroulent les apprentissages ? <i class="fas fa-chevron-down"></i></summary>
+                    <summary class="faq-question">Comment se déroulent les apprentissages ?<i class="fas fa-chevron-down"></i></summary>
                     <div class="faq-answer">Les formations sont asynchrones : les élèves progressent à leur rythme, selon leur emploi du temps, en utilisant les outils en ligne mis à disposition sur la plateforme. Il est toujours possible de contacter MA pendant la formation. Les sessions de correction des exercices et des contrôles, encadrés par le professeur, durent entre une heure et une heure trente.</div>
                 </details>
                 <details class="faq-item">
-                    <summary class="faq-question">Quels sont les tarifs ? <i class="fas fa-chevron-down"></i></summary>
-                    <div class="faq-answer">Les tarifs varient en fonction des formations, de leur durée et de leur complexité. L'ensemble des grilles tarifaires est consultable directement sur la plateforme, à l'adresse <a href="https://academie.ma-maths.com" target="_blank" rel="noopener">academie.ma-maths.com</a>.</div>
+                    <summary class="faq-question">Quels sont les tarifs ?<i class="fas fa-chevron-down"></i></summary>
+                    <div class="faq-answer">Les tarifs varient en fonction des formations, de leur durée et de leur complexité. L'ensemble des grilles tarifaires est consultable directement sur la plateforme, à l'adresse academie.ma-maths.com.</div>
                 </details>
                 <details class="faq-item">
-                    <summary class="faq-question">Comment prendre rendez-vous ou poser une question ? <i class="fas fa-chevron-down"></i></summary>
+                    <summary class="faq-question">Comment prendre rendez-vous ou poser une question ?<i class="fas fa-chevron-down"></i></summary>
                     <div class="faq-answer">Vous pouvez réserver un créneau de 15 minutes via le lien de prise de rendez-vous, ou nous écrire directement via le formulaire de contact en bas de cette page. Nous vous répondrons dans les meilleurs délais.</div>
                 </details>
             </div>
         </div>
     </section>
 
+    <!-- Zones Section -->
+    <section id="zones" class="section" style="background: var(--primary); color: var(--white); padding: 40px 0;">
+        <div class="container text-center">
+            <h2 style="color: var(--white); font-size: 1.8rem; margin-bottom: 15px;">Zones desservies</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 10px;">Cours particuliers et soutien scolaire en mathématiques à Angers et dans toute l'agglomération angevine. Les formations en ligne sont accessibles partout en France.</p>
+            <p style="font-size: 1rem; line-height: 1.8; opacity: 0.9;">Angers (49000) · Avrillé (49100) · Beaucouzé (49000) · Saint-Barthélemy-d'Anjou (49100) · Trélazé (49240) · Les Ponts-de-Cé (49130) · Angers Loire Métropole · Maine-et-Loire (49) · En ligne partout en France</p>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="section contact">
+    <section id="contact" class="section contact bg-light">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Contact</h2>
@@ -608,47 +729,52 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <div class="contact-icon"><i class="fas fa-calendar-check"></i></div>
                         <div class="contact-details">
                             <h4>Prendre rendez-vous</h4>
                             <a href="https://calendar.app.google/Sh5p36BE3vA2muK78" target="_blank" rel="noopener">Rendez-vous de 15 minutes</a>
                         </div>
                     </div>
-                </div>
-                <div class="contact-cta">
-                    <p>Vous souhaitez échanger sur vos besoins en mathématiques ? Écrivez-nous :</p>
-                    <div class="contact-form-wrapper">
-                        <form class="contact-form" id="contactForm" action="https://forms.gle/rcFzUiRtrqSjjGh67" method="get" target="_blank">
-                            <div class="form-group">
-                                <label for="cf-name">Nom et prénom</label>
-                                <input type="text" id="cf-name" name="nom" required placeholder="Votre nom">
-                            </div>
-                            <div class="form-group">
-                                <label for="cf-email">Adresse électronique</label>
-                                <input type="email" id="cf-email" name="email" required placeholder="vous@exemple.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="cf-niveau">Niveau de l'élève</label>
-                                <select id="cf-niveau" name="niveau" required>
-                                    <option value="" disabled selected>Sélectionnez un niveau</option>
-                                    <option value="5eme">Cinquième</option>
-                                    <option value="4eme">Quatrième</option>
-                                    <option value="3eme">Troisième</option>
-                                    <option value="2nde">Seconde</option>
-                                    <option value="1ere">Première</option>
-                                    <option value="professionnel">Professionnel / Remise à niveau</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="cf-message">Votre message</label>
-                                <textarea id="cf-message" name="message" required placeholder="Décrivez votre demande..."></textarea>
-                            </div>
-                            <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> Envoyer ma demande</button>
-                        </form>
-                        <div class="form-success" id="formSuccess">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Votre demande a bien été prise en compte. Nous vous répondrons dans les meilleurs délais.</p>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-star"></i></div>
+                        <div class="contact-details">
+                            <h4>Avis Google</h4>
+                            <a href="https://maps.google.com/maps?cid=4095178417133372705" target="_blank" rel="noopener">Voir nos avis sur Google</a>
                         </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <p style="margin-bottom: 20px; font-size: 1.1rem;">Vous souhaitez échanger sur vos besoins en mathématiques ? Écrivez-nous :</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom et prénom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Adresse électronique</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="level">Niveau de l'élève</label>
+                            <select id="level" name="level" required>
+                                <option value="">Sélectionnez un niveau</option>
+                                <option value="Cinquième">Cinquième</option>
+                                <option value="Quatrième">Quatrième</option>
+                                <option value="Troisième">Troisième</option>
+                                <option value="Seconde">Seconde</option>
+                                <option value="Première">Première</option>
+                                <option value="Professionnel">Professionnel / Remise à niveau</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Votre message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Envoyer</button>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Votre demande a bien été prise en compte. Nous vous répondrons dans les meilleurs délais.</p>
                     </div>
                 </div>
             </div>
@@ -660,20 +786,24 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <a href="#" class="logo"><img src="logo-ma-maths.jpg" alt="MA-Maths" class="logo-img"></a>
-                    <p>L'excellence en mathématiques, accessible à tous.</p>
+                    <div class="logo">
+                        <img src="logo-ma-maths.jpg" alt="MA-Maths" class="logo-img" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <p>Cours et stages de mathématiques à Angers et en ligne, du collège au lycée, avec professeure certifiée.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Liens rapides</h4>
+                    <h4>Navigation</h4>
                     <ul>
+                        <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#apropos">À propos</a></li>
-                        <li><a href="#temoinages">Témoignages</a></li>
+                        <li><a href="#formations">Formations</a></li>
+                        <li><a href="#stages">Stages</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="https://academie.ma-maths.com" target="_blank" rel="noopener">Plateforme</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Documents</h4>
+                    <h4>Légal</h4>
                     <ul>
                         <li><a href="https://drive.google.com/file/d/1_i2xasE4SU4wyK0NF5y2H8SOBLP6YOWl/view?usp=drive_link" target="_blank" rel="noopener">CGV</a></li>
                         <li><a href="https://drive.google.com/file/d/1EV9_25oY71E4g1IvwxlLzqSmJUAAkIgV/view?usp=drive_link" target="_blank" rel="noopener">Politique de confidentialité</a></li>
@@ -687,94 +817,103 @@
     </footer>
 
     <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-        const header = document.getElementById('header');
-        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         });
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 50);
-        });
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter-number');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const target = entry.target;
-                        const targetValue = parseInt(target.dataset.target);
-                        const duration = 2000;
-                        const step = targetValue / (duration / 16);
-                        let current = 0;
-                        const updateCounter = () => {
-                            current += step;
-                            if (current < targetValue) {
-                                target.textContent = Math.floor(current).toLocaleString('fr');
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                target.textContent = targetValue.toLocaleString('fr');
-                            }
-                        };
-                        updateCounter();
-                        observer.unobserve(target);
-                    }
-                });
-            }, { threshold: 0.5 });
-            counters.forEach(counter => observer.observe(counter));
-        }
-        document.addEventListener('DOMContentLoaded', animateCounters);
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
             });
         });
+
+        // Carousel
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.getElementById('carouselDots');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            dotsContainer.children[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dotsContainer.children[currentSlide].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+        setInterval(() => goToSlide(currentSlide + 1), 6000);
+
+        // Counters
+        const counters = document.querySelectorAll('.counter-number');
+        const speed = 200;
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = +entry.target.dataset.target;
+                    const increment = target / speed;
+                    let current = 0;
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            entry.target.innerText = Math.ceil(current);
+                            setTimeout(updateCounter, 10);
+                        } else {
+                            entry.target.innerText = target;
+                        }
+                    };
+                    updateCounter();
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // Contact form
         const contactForm = document.getElementById('contactForm');
         const formSuccess = document.getElementById('formSuccess');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = encodeURIComponent(document.getElementById('cf-name').value);
-                const email = encodeURIComponent(document.getElementById('cf-email').value);
-                const niveau = encodeURIComponent(document.getElementById('cf-niveau').value);
-                const message = encodeURIComponent(document.getElementById('cf-message').value);
-                const subject = encodeURIComponent('Nouvelle demande de contact - MA-Maths');
-                const body = encodeURIComponent('Nom : ' + name + '\nEmail : ' + email + '\nNiveau : ' + niveau + '\n\nMessage :\n' + message);
-                window.location.href = 'mailto:contact@ma-maths.com?subject=' + subject + '&body=' + body;
-                contactForm.style.display = 'none';
-                formSuccess.classList.add('show');
-            });
-        }
-        const carouselTrack = document.getElementById('carouselTrack');
-        const carouselSlides = carouselTrack ? carouselTrack.querySelectorAll('.carousel-slide') : [];
-        const carouselDotsContainer = document.getElementById('carouselDots');
-        let currentSlide = 0;
-        let carouselInterval;
-        if (carouselSlides.length > 0) {
-            carouselSlides.forEach((_, i) => {
-                const dot = document.createElement('button');
-                dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-                dot.addEventListener('click', () => { goToSlide(i); resetCarouselTimer(); });
-                carouselDotsContainer.appendChild(dot);
-            });
-        }
-        function goToSlide(index) {
-            currentSlide = index;
-            carouselTrack.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-            carouselSlides.forEach((slide, i) => slide.classList.toggle('active', i === currentSlide));
-            document.querySelectorAll('.carousel-dot').forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
-        }
-        function nextSlide() { goToSlide((currentSlide + 1) % carouselSlides.length); }
-        function prevSlide() { goToSlide((currentSlide - 1 + carouselSlides.length) % carouselSlides.length); }
-        function startCarouselAuto() { carouselInterval = setInterval(nextSlide, 6000); }
-        function resetCarouselTimer() { clearInterval(carouselInterval); startCarouselAuto(); }
-        if (carouselSlides.length > 0) {
-            startCarouselAuto();
-            document.getElementById('carouselNext').addEventListener('click', () => { nextSlide(); resetCarouselTimer(); });
-            document.getElementById('carouselPrev').addEventListener('click', () => { prevSlide(); resetCarouselTimer(); });
-        }
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            contactForm.style.display = 'none';
+            formSuccess.classList.add('show');
+        });
     </script>
 </body>
 </html>
