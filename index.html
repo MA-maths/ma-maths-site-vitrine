@@ -115,9 +115,10 @@
         }
         .hero-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .hero-content { z-index: 1; }
-        .hero-title { font-size: 3.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; color: var(--dark); }
+        .hero-title { font-size: 2.6rem; font-weight: 700; line-height: 1.25; margin-bottom: 20px; color: var(--dark); }
         .hero-title .highlight { color: var(--primary); }
         .hero-subtitle { font-size: 1.25rem; color: var(--text); margin-bottom: 35px; max-width: 550px; }
+        .hero-slogan { display: block; color: var(--primary-light); font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.3em; margin-bottom: 10px; }
         .hero-image { display: flex; justify-content: center; align-items: center; }
         .hero-photo { width: 400px; height: 400px; object-fit: cover; border-radius: 50%; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); border: 8px solid #1a237e; }
         .scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); text-align: center; animation: bounce 2s infinite; }
@@ -141,6 +142,7 @@
         .about-quote { text-align: justify; padding: 50px 40px; border: 3px solid var(--primary); border-radius: 25px; background: var(--white); box-shadow: 0 8px 30px rgba(26, 35, 126, 0.1); }
         .about-quote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.1rem; font-style: italic; color: #000000; line-height: 1.5; font-weight: 400; margin-bottom: 0; }
         .about-badges { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .about-badges-label { font-size: 0.88rem; font-weight: 600; color: var(--text); margin-bottom: 0; }
         .about-badges .trust-badge { font-size: 0.85rem; padding: 8px 16px; }
         .about-text .lead { margin-bottom: 20px; }
         .about-text .mission { font-weight: 600; color: var(--primary); background: rgba(26, 35, 126, 0.08); padding: 15px; border-left: 4px solid var(--primary); margin: 20px 0; }
@@ -354,15 +356,13 @@
     <section id="accueil" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">L'excellence en mathématiques, <span class="highlight">accessible à tous</span></h1>
-                <p class="hero-subtitle">Cours et stages de mathématiques à Angers, en ligne et en distanciel avec professeur certifié</p>
-                <a href="https://academie.ma-maths.com" class="btn btn-primary btn-large">Découvrir nos formations</a>
+                <h1 class="hero-title">Cours d'approfondissement en mathématiques à Angers et en ligne, <span class="highlight">par une professeure expérimentée et certifiée</span></h1>
+                <p class="hero-subtitle"><span class="hero-slogan">L'excellence en mathématiques, accessible à tous.</span> Premier bilan offert, sans engagement.</p>
+                <a href="https://calendly.com/ma-maths" class="btn btn-primary btn-large" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> Réserver mon bilan offert (15 min)</a>
                 <div class="hero-trust">
-                    <span class="trust-badge">Professeur certifié en maths</span>
+                    <span class="trust-badge">Professeure certifiée de mathématiques</span>
                     <span class="trust-badge">10+ ans d'expérience</span>
-                    <span class="trust-badge">Stanislas Paris</span>
-                    <span class="trust-badge">Fénélon Sainte-Marie</span>
-                    <span class="trust-badge">Institut Mongazon</span>
+                    <span class="trust-badge">Bilan offert, sans engagement</span>
                 </div>
             </div>
             <div class="hero-image">
@@ -381,8 +381,9 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="about-quote">
-                        <p>Mon objectif ? Rendre accessible à tous les méthodes et cours des meilleurs établissements de France.</p>
+                        <p>Mon objectif ? Rendre accessibles à tous les méthodes éprouvées des grands établissements privés et publics où j'ai enseigné.</p>
                     </div>
+                    <p class="about-badges-label">Références d'enseignement :</p>
                     <div class="about-badges">
                         <span class="trust-badge">Lycée Henri IV</span>
                         <span class="trust-badge">Collège Fénélon Sainte-Marie</span>
@@ -392,8 +393,8 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <p class="lead">Bonjour, je m'appelle Marie-Albane. Je suis mère de 2 enfants et professeur certifié de mathématiques.</p>
-                    <p>J'ai enseigné pendant plus de 10 ans au sein de grands établissements privés parisiens avant de rejoindre l'Anjou, où j'ai eu des classes diverses et variées, au collège et au lycée.</p>
+                    <p class="lead">Bonjour, je m'appelle Marie-Albane. Je suis mère de 2 enfants et professeure certifiée de mathématiques.</p>
+                    <p>J'ai enseigné pendant plus de dix ans dans de grands établissements privés et publics, à Paris puis en Anjou, du collège au lycée. Les cours que je propose s'inspirent des méthodes éprouvées de ces établissements d'excellence, que j'adapte à la personnalité et aux besoins de chaque élève.</p>
                     <p>J'ai accompagné des dizaines d'élèves en cours privé, en soutien ou approfondissement des mathématiques, à Paris et en province. J'ai également animé des stages de remise à niveau et de pré-rentrée.</p>
                     <p class="mission">Bien accompagné, je suis convaincue que chacun peut libérer tout son potentiel en mathématiques. Avec écoute, bienveillance, et passion, j'offre le meilleur de mon expérience et de mes méthodes aux élèves désireux de comprendre, d'apprendre et d'approfondir leurs connaissances et méthodes de travail en mathématiques.</p>
                     <p>Si votre objectif est de progresser, d'obtenir le déclic, reprendre confiance et obtenir des résultats, vous êtes au bon endroit.</p>
@@ -486,17 +487,17 @@
             <div class="counters-grid">
                 <div class="counter-item">
                     <div class="counter-icon"><i class="fas fa-user-graduate"></i></div>
-                    <div class="counter-number" data-target="1500">0</div>
+                    <div class="counter-number" data-target="1500">100</div>
                     <p class="counter-label">Élèves accompagnés</p>
                 </div>
                 <div class="counter-item">
                     <div class="counter-icon"><i class="fas fa-file-alt"></i></div>
-                    <div class="counter-number" data-target="900">0</div>
+                    <div class="counter-number" data-target="900">100</div>
                     <p class="counter-label">Tests et contrôles effectués</p>
                 </div>
                 <div class="counter-item">
                     <div class="counter-icon"><i class="fas fa-clock"></i></div>
-                    <div class="counter-number" data-target="1300">0</div>
+                    <div class="counter-number" data-target="1300">100</div>
                     <p class="counter-label">Heures de cours données</p>
                 </div>
             </div>
@@ -582,7 +583,7 @@
                 </details>
                 <details class="faq-item">
                     <summary class="faq-question">Comment sont élaborés les cours et quelles sont vos méthodes ? <i class="fas fa-chevron-down"></i></summary>
-                    <div class="faq-answer">Les cours sont élaborés à partir de ressources et supports pédagogiques uniques, personnels et utilisés dans les meilleurs établissements de France (Stanislas Paris, Henri IV, Janson de Sailly, Saint-Louis de Gonzague). MA s'inspire des méthodes de ces établissements, en y apportant son expérience, sa pédagogie, ses valeurs et son vécu. Elle les adapte à chaque élève accompagné selon sa personnalité et ses besoins.</div>
+                    <div class="faq-answer">Les cours s'appuient sur des ressources et supports pédagogiques que j'ai conçus et utilisés dans les grands établissements privés et publics où j'ai enseigné. MA-Maths n'est affiliée à aucun de ces établissements : je m'inspire de leurs méthodes, en y apportant mon expérience, ma pédagogie et mes valeurs, et je les adapte à chaque élève accompagné selon sa personnalité et ses besoins.</div>
                 </details>
                 <details class="faq-item">
                     <summary class="faq-question">Comment se déroulent les apprentissages ? <i class="fas fa-chevron-down"></i></summary>
@@ -696,10 +697,10 @@
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Documents</h4>
                     <ul>
                         <li><a href="https://drive.google.com/file/d/1_i2xasE4SU4wyK0NF5y2H8SOBLP6YOWl/view?usp=drive_link" target="_blank" rel="noopener">CGV</a></li>
                         <li><a href="https://drive.google.com/file/d/1EV9_25oY71E4g1IvwxlLzqSmJUAAkIgV/view?usp=drive_link" target="_blank" rel="noopener">Politique de confidentialité</a></li>
+                        <li><a href="https://drive.google.com/drive/folders/1zyhcNzz33hTPfUPhbfprvLH_82ZdWvXB" target="_blank" rel="noopener">Mentions légales</a></li>
                     </ul>
                 </div>
             </div>
@@ -728,8 +729,10 @@
                         const target = entry.target;
                         const targetValue = parseInt(target.dataset.target);
                         const duration = 2000;
-                        const step = targetValue / (duration / 16);
-                        let current = 0;
+                        const startValue = 100;
+                        const step = (targetValue - startValue) / (duration / 16);
+                        let current = startValue;
+                        target.textContent = startValue.toLocaleString('fr');
                         const updateCounter = () => {
                             current += step;
                             if (current < targetValue) {
