@@ -260,12 +260,13 @@
         .footer-bottom .logo-accent { color: var(--white); }
 
         /* MOBILE MENU */
-        .mobile-menu { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--light); z-index: 2000; display: none; flex-direction: column; padding: 80px 20px 20px; }
+        .mobile-menu { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--light); z-index: 2000; display: none; flex-direction: column; padding: 80px 20px 20px; overflow-y: auto; }
         .mobile-menu.active { display: flex; }
         .mobile-menu .nav-links { flex-direction: column; gap: 20px; text-align: center; }
         .mobile-menu .nav-links li { width: 100%; }
         .mobile-menu .nav-links a { font-size: 1.2rem; padding: 10px 0; color: var(--text); }
         .mobile-menu .btn-primary { margin-top: 30px; }
+        .mobile-menu-close { position: absolute; top: 25px; right: 20px; background: none; border: none; font-size: 1.6rem; color: var(--primary); cursor: pointer; padding: 5px; }
 
         /* RESPONSIVE */
         @media (max-width: 1024px) {
@@ -341,19 +342,22 @@
             </nav>
             <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
         </div>
-        <div class="mobile-menu" id="mobileMenu">
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#formations">Formations</a></li>
-                <li><a href="#valeurs">Nos valeurs</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#temoinages">Témoignages</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="https://academie.ma-maths.com" class="btn btn-primary">Accéder à la plateforme</a>
-        </div>
     </header>
+
+    <!-- Mobile Menu (placé hors de l'en-tête : le backdrop-filter de l'en-tête confine les éléments fixes enfants) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu"><i class="fas fa-times"></i></button>
+        <ul class="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#formations">Formations</a></li>
+            <li><a href="#valeurs">Nos valeurs</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#temoinages">Témoignages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="https://academie.ma-maths.com" class="btn btn-primary">Accéder à la plateforme</a>
+    </div>
 
     <!-- Hero Section -->
     <section id="accueil" class="hero">
@@ -721,10 +725,16 @@
     <script>
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
         const header = document.getElementById('header');
-        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+        const toggleMobileMenu = (open) => {
+            mobileMenu.classList.toggle('active', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        };
+        mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(!mobileMenu.classList.contains('active')));
+        mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
         document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+            link.addEventListener('click', () => toggleMobileMenu(false));
         });
         window.addEventListener('scroll', () => {
             header.classList.toggle('scrolled', window.scrollY > 50);
