@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de maths à Angers : professeure certifiée | MA-Maths</title>
+    <meta name="description" content="Cours et stages de mathématiques à Angers avec une professeure certifiée. Suivi individuel, résultats rapides. Bilan offert de 15 min, sans engagement.">
+    <link rel="canonical" href="https://www.ma-maths.com/cours-maths-angers.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a237e;
+            --primary-light: #3f51b5;
+            --primary-dark: #0d1b60;
+            --secondary: #00695c;
+            --accent: #ff6b6b;
+            --light: #FAFAFA;
+            --dark: #212529;
+            --gray: #6c757d;
+            --white: #ffffff;
+            --text: #343a40;
+            --text-light: #6c757d;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --section-padding: 80px 0;
+            --container-width: 1200px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-sans); font-size: 16px; line-height: 1.6; color: var(--text); background-color: var(--light); overflow-x: hidden; }
+        .container { width: 100%; max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 1.2; }
+        p { margin-bottom: 1rem; color: var(--text); }
+        .lead { font-size: 1.2rem; font-weight: 400; }
+        a { color: var(--primary); text-decoration: none; transition: color 0.3s ease; }
+        a:hover { color: var(--primary-dark); }
+        .text-center { text-align: center; }
+        .header { position: fixed; top: 0; left: 0; right: 0; background: rgba(250, 250, 250, 0.98); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); z-index: 1000; padding: 15px 0; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo-img { height: 45px; width: auto; }
+        .navbar { display: flex; align-items: center; gap: 30px; }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { font-weight: 500; color: var(--text); position: relative; padding: 5px 0; }
+        .btn { display: inline-block; padding: 12px 24px; border-radius: 50px; font-family: var(--font-sans); font-weight: 500; font-size: 0.95rem; text-decoration: none; text-align: center; transition: all 0.3s ease; border: none; cursor: pointer; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-large { padding: 15px 30px; font-size: 1.1rem; }
+        .page-hero { padding: 150px 0 60px; background: linear-gradient(135deg, #FAFAFA 0%, #f0f2f5 100%); }
+        .hero-slogan { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 400; color: var(--primary-light); font-size: 1.45rem; margin-bottom: 12px; }
+        .page-hero h1 { font-size: 2.5rem; color: var(--dark); margin-bottom: 18px; max-width: 850px; }
+        .page-hero .lead { margin-bottom: 30px; max-width: 850px; }
+        .section { padding: var(--section-padding); }
+        .bg-light { background-color: var(--light); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-title { font-size: 2.5rem; font-weight: 700; color: var(--dark); }
+        .content-grid { max-width: 900px; margin: 0 auto; }
+        .pain-card { background: var(--white); border-radius: 15px; padding: 35px; margin-bottom: 25px; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08); }
+        .pain-card h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: 15px; }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: var(--white); border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); overflow: hidden; }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 20px 25px; font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; color: var(--dark); cursor: pointer; list-style: none; }
+        .faq-question::-webkit-details-marker { display: none; }
+        .faq-answer { padding: 0 25px 20px; color: var(--text); font-size: 0.98rem; line-height: 1.7; }
+        .cta-final { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--white); text-align: center; padding: 70px 20px; }
+        .cta-final h2 { color: var(--white); font-size: 2rem; margin-bottom: 15px; }
+        .cta-final p { color: rgba(255, 255, 255, 0.9); font-size: 1.15rem; margin-bottom: 30px; }
+        .cta-final .btn { background: var(--white); color: var(--primary); font-weight: 600; }
+        .cta-final .btn:hover { background: #e8eaf0; transform: translateY(-2px); }
+        .footer { background: var(--dark); color: rgba(255, 255, 255, 0.8); padding: 60px 0 30px; }
+        .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 40px; }
+        .footer-logo { text-align: center; }
+        .footer-logo .logo { justify-content: center; color: var(--white); margin-bottom: 15px; display: inline-flex; }
+        .footer-logo .logo-img { height: 50px; }
+        .footer-logo p { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; margin-top: 10px; font-style: italic; }
+        .footer-links h4 { color: var(--white); font-size: 1.1rem; margin-bottom: 20px; font-family: var(--font-sans); font-weight: 600; text-align: center; }
+        .footer-links ul { list-style: none; text-align: center; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--white); }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .footer-bottom p { margin-bottom: 0; font-size: 1rem; color: var(--white); }
+        .footer-bottom .logo-accent { color: var(--white); }
+        .form-intro { margin-top: 35px; margin-bottom: 0; color: rgba(255, 255, 255, 0.9); }
+        .stage-form-wrapper { background: var(--white); border-radius: 15px; padding: 35px; max-width: 700px; margin: 25px auto 0; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15); text-align: left; }
+        .stage-form { display: flex; flex-direction: column; gap: 20px; }
+        .form-group { display: flex; flex-direction: column; gap: 6px; }
+        .form-group label { font-size: 0.9rem; font-weight: 600; color: var(--dark); }
+        .form-group input, .form-group textarea { padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: 10px; font-family: var(--font-sans); font-size: 0.95rem; color: var(--text); background: var(--light); transition: border-color 0.3s ease; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-submit { background: var(--primary); color: var(--white); border: none; padding: 14px; border-radius: 50px; font-family: var(--font-sans); font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+        .form-submit:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .form-success { display: none; text-align: center; padding: 40px 20px; color: var(--white); }
+        .form-success.show { display: block; }
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .page-hero h1 { font-size: 1.9rem; }
+            .section-title { font-size: 1.9rem; }
+            .footer-content { grid-template-columns: 1fr; gap: 30px; }
+            .pain-card { padding: 25px 20px; }
+            .stage-form-wrapper { padding: 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo"><img src="logo-ma-maths.jpg" alt="MA-Maths" class="logo-img"></a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#formations">Formations</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <a href="https://calendar.app.google/Sh5p36BE3vA2muK78" class="btn btn-primary" target="_blank" rel="noopener">Bilan offert</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="hero-slogan">L'excellence en mathématiques, accessible à tous.</p>
+                <h1>Cours de mathématiques à Angers, avec une professeure certifiée</h1>
+                <p class="lead">Vous cherchez un accompagnement sérieux et durable en mathématiques à Angers ? Je suis <strong>Marie-Albane Dupuy, professeure certifiée de mathématiques</strong> avec plus de dix ans d'expérience dans de grands établissements privés et publics. J'accompagne les élèves du collège au lycée, de la cinquième à la terminale, en présentiel à Angers et en ligne partout dans le monde.</p>
+                <a href="https://calendar.app.google/Sh5p36BE3vA2muK78" class="btn btn-primary btn-large" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> Réserver mon bilan offert (15 min)</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Pourquoi choisir MA<span style="color: var(--primary);">-Maths</span> à Angers</h2>
+                </div>
+                <div class="content-grid">
+                    <article class="pain-card">
+                        <h2>Votre enfant a besoin d'être nourri et stimulé en mathématiques</h2>
+                        <p>Certains élèves n'ont pas de difficultés : ils ont de l'appétit. Un cours suivi en classe ne suffit pas toujours à nourrir une curiosité mathématique vive, et l'ennui peut être aussi dommageable que le décrochage.</p>
+                        <p>Mon approche commence toujours par un diagnostic précis : situer le niveau réel de votre enfant, le nourrir de méthodes haut de gamme et le stimuler par des défis adaptés, pour transformer un potentiel en maîtrise durable. Bien accompagné, chaque élève peut libérer tout son potentiel.</p>
+                    </article>
+                    <article class="pain-card">
+                        <h2>Vous cherchez un vrai professeur à Angers, pas un organisme impersonnel</h2>
+                        <p>Entre les plateformes qui mettent en relation avec des étudiants à 15 € de l'heure et les organismes aux tarifs élevés sans suivi réel, le juste milieu est rare : une professeure certifiée, disponible, qui connaît votre enfant et ses programmes.</p>
+                        <p>C'est exactement ce que je propose : un accompagnement individuel, exigeant et humain, avec un interlocuteur unique qui suit la progression de votre enfant de la première séance au dernier contrôle.</p>
+                    </article>
+                    <article class="pain-card">
+                        <h2>Brevet, bac ou spécialité maths : chaque point compte dès maintenant</h2>
+                        <p>Les épreuves de mathématiques du brevet et du baccalauréat récompensent les automatismes, la rigueur et la méthode. La maîtrise des fondamentaux est devenue incontournable pour tous les élèves, de la cinquième à la terminale.</p>
+                        <p>Je propose également des stages intensifs de pré-rentrée et de remise à niveau en présentiel à Angers, en petits groupes de dix élèves maximum, pour aborder chaque rentrée avec des bases solides.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-final">
+            <div class="container">
+                <h2>Faisons le point ensemble</h2>
+                <p>Identifions précisément les besoins de votre enfant : premier bilan offert, sans engagement.</p>
+                <a href="https://calendar.app.google/Sh5p36BE3vA2muK78" class="btn btn-large" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> Réserver mon bilan offert (15 min)</a>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Questions fréquentes</h2>
+                </div>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary class="faq-question">Où se déroulent les cours à Angers ? <i class="fas fa-chevron-down"></i></summary>
+                        <div class="faq-answer">Les cours particuliers se déroulent en présentiel à Angers, ou à distance en visioconférence si vous préférez. Les stages intensifs ont lieu dans des salles dédiées à Angers.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Quels niveaux sont concernés ? <i class="fas fa-chevron-down"></i></summary>
+                        <div class="faq-answer">J'accompagne les élèves du collège au lycée, de la cinquième à la terminale, dans un objectif d'approfondissement scolaire.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Comment suivez-vous les progrès de mon enfant ? <i class="fas fa-chevron-down"></i></summary>
+                        <div class="faq-answer">Chaque accompagnement débute par un diagnostic précis. Les progrès sont mesurés par des contrôles réguliers, des sessions de correction encadrées et un retour systématique aux parents.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Quels sont les tarifs ? <i class="fas fa-chevron-down"></i></summary>
+                        <div class="faq-answer">Les tarifs varient selon la formule choisie : cours particuliers, formation en ligne ou stage. L'ensemble des grilles tarifaires figure sur la plateforme académique, et le premier bilan de 15 minutes est offert. Pour les stages de mathématiques, les tarifs sont déterminés en fonction du nombre d'élèves et sont disponibles sur demande. Le premier stage de mathématiques aura lieu le <strong>samedi 17 octobre 2026</strong> : <a target="_blank" rel="noopener" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NWxhM2JhNG9hYnFyODRzaWRpaDh0NW4wbzIgY29udGFjdEBtYS1tYXRocy5jb20&amp;tmsrc=contact%40ma-maths.com"><img border="0" style="vertical-align: middle;" src="https://calendar.google.com/calendar/images/ext/gc_button1_fr.gif" alt="Ajouter à mon agenda Google Calendar"></a></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-final">
+            <div class="container">
+                <h2>Réservez la place de votre enfant pour un stage en mathématiques</h2>
+                <p><strong>Prochain stage : samedi 17 octobre 2026.</strong> Stages intensifs de pré-rentrée et de remise à niveau, en présentiel à Angers, en petits groupes de dix élèves maximum.</p>
+                <a href="https://calendar.app.google/Sh5p36BE3vA2muK78" class="btn btn-large" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> Réserver la place de votre enfant</a>
+                <p class="form-intro">Pour que je vous recontacte directement, remplissez ce formulaire d'inscription :</p>
+                <div class="stage-form-wrapper">
+                    <form class="stage-form" id="stageForm">
+                        <div class="form-group">
+                            <label for="sf-prenom">Prénom de l'élève</label>
+                            <input type="text" id="sf-prenom" name="prenom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sf-nom">Nom de l'élève</label>
+                            <input type="text" id="sf-nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sf-email-eleve">Adresse électronique de l'élève</label>
+                            <input type="email" id="sf-email-eleve" name="email_eleve" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sf-parent">Nom et prénom d'un parent</label>
+                            <input type="text" id="sf-parent" name="parent" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sf-email-parent">Adresse électronique du parent</label>
+                            <input type="email" id="sf-email-parent" name="email_parent" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sf-commentaires">Commentaires</label>
+                            <textarea id="sf-commentaires" name="commentaires" placeholder="Niveau, stage souhaité, disponibilités..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> Envoyer ma demande d'inscription</button>
+                    </form>
+                </div>
+                <div class="form-success" id="stageFormSuccess">
+                    <p>Votre demande d'inscription a bien été prise en compte. Je vous répondrai dans les meilleurs délais.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo"><img src="logo-ma-maths.jpg" alt="MA-Maths" class="logo-img"></a>
+                    <p>L'excellence en mathématiques, accessible à tous.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="cours-maths-expatries.html">Élèves expatriés</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Documents</h4>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/1_i2xasE4SU4wyK0NF5y2H8SOBLP6YOWl/view?usp=drive_link" target="_blank" rel="noopener">CGV</a></li>
+                        <li><a href="https://drive.google.com/file/d/1EV9_25oY71E4g1IvwxlLzqSmJUAAkIgV/view?usp=drive_link" target="_blank" rel="noopener">Politique de confidentialité</a></li>
+                        <li><a href="https://drive.google.com/file/d/1YOC_FArxCqAGSnzHyBPX8jDzvMLckv4d/view?usp=drive_link" target="_blank" rel="noopener">Mentions légales</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MA<span class="logo-accent">-Maths</span> — Marie-Albane Dupuy, professeure certifiée de mathématiques</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const stageForm = document.getElementById('stageForm');
+        const stageFormSuccess = document.getElementById('stageFormSuccess');
+        if (stageForm) {
+            stageForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const prenom = document.getElementById('sf-prenom').value;
+                const nom = document.getElementById('sf-nom').value;
+                const emailEleve = document.getElementById('sf-email-eleve').value;
+                const parent = document.getElementById('sf-parent').value;
+                const emailParent = document.getElementById('sf-email-parent').value;
+                const commentaires = document.getElementById('sf-commentaires').value;
+                const subject = encodeURIComponent("Demande d'inscription à un stage de mathématiques - MA-Maths");
+                const body = encodeURIComponent("Prénom de l'élève : " + prenom + "\nNom de l'élève : " + nom + "\nAdresse électronique de l'élève : " + emailEleve + "\nNom et prénom du parent : " + parent + "\nAdresse électronique du parent : " + emailParent + "\nCommentaires :\n" + commentaires);
+                window.location.href = 'mailto:contact@ma-maths.com?subject=' + subject + '&body=' + body;
+                stageForm.style.display = 'none';
+                stageFormSuccess.classList.add('show');
+            });
+        }
+    </script>
+
+</body>
+</html>
