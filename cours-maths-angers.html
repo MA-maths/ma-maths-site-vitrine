@@ -70,6 +70,7 @@
         .cta-final p { color: rgba(255, 255, 255, 0.9); font-size: 1.15rem; margin-bottom: 30px; }
         .cta-final .btn { background: var(--white); color: var(--primary); font-weight: 600; }
         .cta-final .btn:hover { background: #e8eaf0; transform: translateY(-2px); }
+        .stage-date { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; color: var(--white); line-height: 1.3; margin: 0 0 14px; letter-spacing: 0.3px; }
         .footer { background: var(--dark); color: rgba(255, 255, 255, 0.8); padding: 60px 0 30px; }
         .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 40px; }
         .footer-logo { text-align: center; }
@@ -194,7 +195,7 @@
         <section class="cta-final">
             <div class="container">
                 <h2>Réservez la place de votre enfant pour un stage en mathématiques</h2>
-                <p><strong>Prochain stage : samedi 17 octobre 2026.</strong> Stages intensifs de pré-rentrée et de remise à niveau, en présentiel à Angers, en petits groupes de dix élèves maximum.</p>
+                <p class="stage-date">Prochain stage : samedi 17 octobre 2026</p>
                 <a href="https://calendar.app.google/Sh5p36BE3vA2muK78" class="btn btn-large" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> Réserver la place de votre enfant</a>
                 <p class="form-intro">Pour que je vous recontacte directement, remplissez ce formulaire d'inscription :</p>
                 <div class="stage-form-wrapper">
@@ -206,10 +207,6 @@
                         <div class="form-group">
                             <label for="sf-nom">Nom de l'élève</label>
                             <input type="text" id="sf-nom" name="nom" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="sf-email-eleve">Adresse électronique de l'élève</label>
-                            <input type="email" id="sf-email-eleve" name="email_eleve" required>
                         </div>
                         <div class="form-group">
                             <label for="sf-parent">Nom et prénom d'un parent</label>
@@ -244,7 +241,7 @@
                     <h4>Liens rapides</h4>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
-                        <li><a href="cours-maths-expatries.html">Élèves expatriés</a></li>
+                        <!-- <li><a href="cours-maths-expatries.html">Élèves expatriés</a></li> -->
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -270,12 +267,11 @@
                 e.preventDefault();
                 const prenom = document.getElementById('sf-prenom').value;
                 const nom = document.getElementById('sf-nom').value;
-                const emailEleve = document.getElementById('sf-email-eleve').value;
                 const parent = document.getElementById('sf-parent').value;
                 const emailParent = document.getElementById('sf-email-parent').value;
                 const commentaires = document.getElementById('sf-commentaires').value;
                 const subject = encodeURIComponent("Demande d'inscription à un stage de mathématiques - MA-Maths");
-                const body = encodeURIComponent("Prénom de l'élève : " + prenom + "\nNom de l'élève : " + nom + "\nAdresse électronique de l'élève : " + emailEleve + "\nNom et prénom du parent : " + parent + "\nAdresse électronique du parent : " + emailParent + "\nCommentaires :\n" + commentaires);
+                const body = encodeURIComponent("Prénom de l'élève : " + prenom + "\nNom de l'élève : " + nom + "\nNom et prénom du parent : " + parent + "\nAdresse électronique du parent : " + emailParent + "\nCommentaires :\n" + commentaires);
                 window.location.href = 'mailto:contact@ma-maths.com?subject=' + subject + '&body=' + body;
                 stageForm.style.display = 'none';
                 stageFormSuccess.classList.add('show');
