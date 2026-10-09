@@ -71,6 +71,7 @@
         .cta-final .btn { background: var(--white); color: var(--primary); font-weight: 600; }
         .cta-final .btn:hover { background: #e8eaf0; transform: translateY(-2px); }
         .stage-date { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; color: var(--white); line-height: 1.3; margin: 0 0 14px; letter-spacing: 0.3px; }
+        .stage-price { font-family: var(--font-sans); font-size: 1.15rem; font-weight: 600; color: rgba(255, 255, 255, 0.95); margin: 0 0 22px; }
         .footer { background: var(--dark); color: rgba(255, 255, 255, 0.8); padding: 60px 0 30px; }
         .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 40px; }
         .footer-logo { text-align: center; }
@@ -97,6 +98,8 @@
         .form-submit:hover { background: var(--primary-dark); transform: translateY(-2px); }
         .form-success { display: none; text-align: center; padding: 40px 20px; color: var(--white); }
         .form-success.show { display: block; }
+        .form-success p { color: var(--white); }
+        .form-success .btn { margin-top: 15px; }
         @media (max-width: 900px) {
             .nav-links { display: none; }
             .page-hero h1 { font-size: 1.9rem; }
@@ -186,7 +189,7 @@
                     </details>
                     <details class="faq-item">
                         <summary class="faq-question">Quels sont les tarifs ? <i class="fas fa-chevron-down"></i></summary>
-                        <div class="faq-answer">Les tarifs varient selon la formule choisie : cours particuliers, formation en ligne ou stage. L'ensemble des grilles tarifaires figure sur la plateforme académique, et le premier bilan de 15 minutes est offert. Pour les stages de mathématiques, les tarifs sont déterminés en fonction du nombre d'élèves et sont disponibles sur demande. Le premier stage de mathématiques aura lieu le <strong>samedi 17 octobre 2026</strong> : <a target="_blank" rel="noopener" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NWxhM2JhNG9hYnFyODRzaWRpaDh0NW4wbzIgY29udGFjdEBtYS1tYXRocy5jb20&amp;tmsrc=contact%40ma-maths.com"><img border="0" style="vertical-align: middle;" src="https://calendar.google.com/calendar/images/ext/gc_button1_fr.gif" alt="Ajouter à mon agenda Google Calendar"></a></div>
+                        <div class="faq-answer">Les tarifs varient selon la formule choisie : cours particuliers, formation en ligne ou stage. L'ensemble des grilles tarifaires figure sur la plateforme académique, et le premier bilan de 15 minutes est offert. Pour les stages de mathématiques, les tarifs sont déterminés en fonction du nombre d'élèves ; celui du samedi 17 octobre 2026 (niveau première) est fixé à 125 euros par élève. Le premier stage de mathématiques aura lieu le <strong>samedi 17 octobre 2026</strong> : <a target="_blank" rel="noopener" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NWxhM2JhNG9hYnFyODRzaWRpaDh0NW4wbzIgY29udGFjdEBtYS1tYXRocy5jb20&amp;tmsrc=contact%40ma-maths.com"><img border="0" style="vertical-align: middle;" src="https://calendar.google.com/calendar/images/ext/gc_button1_fr.gif" alt="Ajouter à mon agenda Google Calendar"></a></div>
                     </details>
                 </div>
             </div>
@@ -196,6 +199,7 @@
             <div class="container">
                 <h2>Réservez la place de votre enfant pour un stage en mathématiques (niveau première)</h2>
                 <p class="stage-date">Prochain stage : samedi 17 octobre 2026</p>
+                <p class="stage-price">Tarif : 125 € par élève</p>
                 <a href="#stageForm" class="btn btn-large"><i class="fas fa-calendar-check"></i> Réserver la place de votre enfant</a>
                 <p class="form-intro">Pour que je vous recontacte directement, remplissez ce formulaire d'inscription :</p>
                 <div class="stage-form-wrapper">
@@ -225,6 +229,8 @@
                 </div>
                 <div class="form-success" id="stageFormSuccess">
                     <p>Votre demande d'inscription a bien été prise en compte. Je vous répondrai dans les meilleurs délais.</p>
+                    <p>Pour confirmer la place de votre enfant, réglez en ligne (125 €) :</p>
+                    <a href="https://buy.stripe.com/6oUdR901UgO6dqd3KegjC00" class="btn btn-large" target="_blank" rel="noopener"><i class="fas fa-credit-card"></i> Régler la place de votre enfant</a>
                 </div>
             </div>
         </section>
