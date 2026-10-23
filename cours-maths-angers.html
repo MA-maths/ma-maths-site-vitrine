@@ -50,6 +50,9 @@
         .btn-primary { background: var(--primary); color: var(--white); }
         .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
         .btn-large { padding: 15px 30px; font-size: 1.1rem; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: var(--white); transform: translateY(-2px); }
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 15px; }
         .page-hero { padding: 150px 0 60px; background: linear-gradient(135deg, #FAFAFA 0%, #f0f2f5 100%); }
         .hero-slogan { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 400; color: var(--primary-light); font-size: 1.45rem; margin-bottom: 12px; }
         .page-hero h1 { font-size: 2.5rem; color: var(--dark); margin-bottom: 18px; max-width: 850px; }
@@ -133,7 +136,10 @@
                 <p class="hero-slogan">L'excellence en mathématiques, accessible à tous.</p>
                 <h1>Cours de mathématiques à Angers, avec une professeure certifiée</h1>
                 <p class="lead">Vous cherchez un accompagnement sérieux et durable en mathématiques à Angers ? Je suis <strong>Marie-Albane Dupuy, professeure certifiée de mathématiques</strong> avec plus de dix ans d'expérience dans de grands établissements privés et publics. J'accompagne les élèves du collège au lycée, de la cinquième à la terminale, en présentiel à Angers et en ligne partout dans le monde.</p>
-                <a href="https://calendar.app.google/Sh5p36BE3vA2muK78" class="btn btn-primary btn-large" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> Réserver mon bilan offert (15 min)</a>
+                <div class="hero-buttons">
+                    <a href="https://calendar.app.google/Sh5p36BE3vA2muK78" class="btn btn-primary btn-large" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> Réserver mon bilan offert (15 min)</a>
+                    <a href="#stageForm" class="btn btn-outline btn-large"><i class="fas fa-pen-to-square"></i> S'inscrire au stage</a>
+                </div>
             </div>
         </section>
 
